@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CreateCrane : MonoBehaviour
+{
+
+    private float CTcool = 5f;
+
+
+    [SerializeField]
+    private GameObject Cr;
+    [SerializeField]
+    private Transform ct;
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (CTcool > 0)
+            CTcool -= Time.smoothDeltaTime;
+        else
+        {
+            GameObject clone = Instantiate(Cr, this.transform.position, Quaternion.Euler(-90,0,90));
+            clone.transform.parent = ct.transform;
+            clone.SetActive(true);
+            
+
+            CTcool = 5f;
+        }
+    }
+}

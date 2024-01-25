@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CircleCall : MonoBehaviour
+{
+    public Transform player; // 첫 번째 오브젝트의 Transform
+    public KeyCode conKey;
+    public float conCool = 0;
+    public Camera cam;
+    public GameObject interText;
+
+    public PuzzleCircleBody pcb;
+
+    
+    // Start is called before the first frame update
+
+    void Update()
+    {
+
+        float distance = Vector3.Distance(player.position, transform.position);
+
+        if (conCool > 0)
+        {
+            conCool -= Time.deltaTime;
+        }
+
+        
+        RaycastHit raycastHit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance, LayerMask.NameToLayer("whatIsGB")))
+        {
+            // 마우스가 오브젝트 위에 있을 때 수행할 작업
+            if ((raycastHit.collider.gameObject == this.gameObject) && (conCool <= 0) && (distance < 8f))
+            {
+                interText.SetActive(true);
+                InGameTextExpose igt;
+                igt= interText.GetComponent<InGameTextExpose>();
+
+                igt.exposeDelay = 2f;
+
+                if (Input.GetKey(conKey))
+                {
+                    pcb.SwitchOn = true;
+                    conCool = 2f;
+                    
+                    AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Switch, this.gameObject);
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+
+}
