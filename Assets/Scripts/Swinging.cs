@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class Swinging : MonoBehaviour
@@ -53,6 +54,9 @@ public class Swinging : MonoBehaviour
     private Material saveMaterial;
     public float shootForce;
     public Animator shtAnim;
+    public Animator airAnim;
+    private bool aired;
+
     
 
     [Header("Other")]
@@ -80,6 +84,9 @@ public class Swinging : MonoBehaviour
     private void Awake()
     {
         lr.positionCount = 0;
+
+        
+
     }
 
     private void Update()
@@ -149,6 +156,7 @@ public class Swinging : MonoBehaviour
         if (Input.GetKeyUp(shootKey))
         {
             shtAnim.runtimeAnimatorController = RACshoot;
+
             ShootCatching();
 
         }
@@ -171,6 +179,26 @@ public class Swinging : MonoBehaviour
 
     private void FixedUpdate()
     {
+        AnimatorClipInfo[] clipInfo = airAnim.GetCurrentAnimatorClipInfo(0);
+        AnimatorStateInfo stateInfo = airAnim.GetCurrentAnimatorStateInfo(0);
+
+        if (airAnim.speed > 0f)
+        {
+            if (stateInfo.normalizedTime >= 0.1f)
+            {
+                airAnim.speed = 1f;
+
+            }
+
+            if (stateInfo.normalizedTime >= 1f)
+            {
+                airAnim.Play(clipInfo[0].clip.name, 0, 0f);
+                airAnim.speed = 0f;
+
+            }
+        }
+
+
         if (joint != null)
         if (GameManager.GameIsPaused == false)
         if (catching)
@@ -239,8 +267,6 @@ public class Swinging : MonoBehaviour
         if (GetComponent<Grappling>() != null)
             GetComponent<Grappling>().StopGrapple();
 
-        
-        
         shtAnim.runtimeAnimatorController = RACstand;
 
         pm.ResetRestrictions();
@@ -293,10 +319,9 @@ public class Swinging : MonoBehaviour
             {
                 catchHitObject.transform.SetParent(null);
             }
-            
         }
 
-            catching = true;
+        catching = true;
 
 
         shtAnim.runtimeAnimatorController = RACshoot;
@@ -400,7 +425,7 @@ public class Swinging : MonoBehaviour
             catchRend.material = saveMaterial;
 
             
-
+            airAnim.speed = 2f;
             ps_shoot.Play();
 
             crs = catchHitObject.GetComponent<CatchableRopeScript>();
