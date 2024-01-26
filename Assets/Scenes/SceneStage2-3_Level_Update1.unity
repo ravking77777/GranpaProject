@@ -782,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 102679663}
   serializedVersion: 2
   m_LocalRotation: {x: 0.49991274, y: 0.49991274, z: -0.50008726, w: 0.50008726}
-  m_LocalPosition: {x: 58.6, y: 102.3, z: 336.7}
+  m_LocalPosition: {x: -32.6, y: 102.3, z: 336.7}
   m_LocalScale: {x: 7.4864917, y: 9.0542, z: 1.3053268}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10514,7 +10514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 6db9c81b100e299439ca842556e4cbff, type: 2}
-  m_StaticLightingSkyUniqueID: 3
+  m_StaticLightingSkyUniqueID: 0
   m_StaticLightingCloudsUniqueID: 0
   m_StaticLightingVolumetricClouds: 0
 --- !u!4 &1915194378
