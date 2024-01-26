@@ -36,8 +36,9 @@ public class CircleCall : MonoBehaviour
 
         AnimatorClipInfo[] clipInfo = anim.GetCurrentAnimatorClipInfo(0);
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        
 
-        // 애니메이션이 끝났는지 여부 확인
+
         if ((anim.speed > 0f) && (stateInfo.normalizedTime >= 1.0f))
         {
             

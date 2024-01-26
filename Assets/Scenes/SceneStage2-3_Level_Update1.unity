@@ -2781,7 +2781,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1893222057}
         m_TargetAssemblyTypeName: PlayerCamera, Assembly-CSharp
         m_MethodName: OnYSlideEvent
         m_Mode: 0
@@ -4757,7 +4757,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1893222057}
         m_TargetAssemblyTypeName: PlayerCamera, Assembly-CSharp
         m_MethodName: OnXSlideEvent
         m_Mode: 0
@@ -7168,13 +7168,13 @@ MonoBehaviour:
   m_HandleRect: {fileID: 380343516}
   m_Direction: 0
   m_MinValue: 80
-  m_MaxValue: 105
+  m_MaxValue: 95
   m_WholeNumbers: 0
   m_Value: 80
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1893222057}
         m_TargetAssemblyTypeName: PlayerCamera, Assembly-CSharp
         m_MethodName: OnFOVSlideEvent
         m_Mode: 0
@@ -10221,6 +10221,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8652588356987441369, guid: 9bc92dc93c0d6e94d9b45fd612f07be7,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10244,6 +10249,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1893222052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1893222057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1163088924839908990, guid: 9bc92dc93c0d6e94d9b45fd612f07be7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1893222052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893222054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479aa2297fa430c4eb2f8f44e97d1727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1893222062 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8467856738219729891, guid: 9bc92dc93c0d6e94d9b45fd612f07be7,

@@ -24,9 +24,7 @@ public class PlatformAttach : MonoBehaviour
          
         }
 
-
-
-        }
+    }
 
     private void OnCollisionExit(Collision other)
     {
