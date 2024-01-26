@@ -11,8 +11,17 @@ public class CircleCall : MonoBehaviour
     public GameObject interText;
 
     public PuzzleCircleBody pcb;
+    private Animator anim;
 
-    
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+
+        anim.speed = 0f;
+
+    }
+
     // Start is called before the first frame update
 
     void Update()
@@ -25,7 +34,18 @@ public class CircleCall : MonoBehaviour
             conCool -= Time.deltaTime;
         }
 
-        
+        AnimatorClipInfo[] clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+
+        // 애니메이션이 끝났는지 여부 확인
+        if ((anim.speed > 0f) && (stateInfo.normalizedTime >= 1.0f))
+        {
+            
+            anim.Play(clipInfo[0].clip.name, 0, 0f);
+            anim.speed = 0f;
+        }
+
+
         RaycastHit raycastHit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance, LayerMask.NameToLayer("whatIsGB")))
         {
@@ -42,6 +62,8 @@ public class CircleCall : MonoBehaviour
                 {
                     pcb.SwitchOn = true;
                     conCool = 2f;
+
+                    anim.speed = 2f;
                     
                     AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Switch, this.gameObject);
                 }
