@@ -4,34 +4,51 @@ using UnityEngine;
 
 public class PlatButtonScript : MonoBehaviour
 {
-
+    [HideInInspector]
     public Material Testm1;
     public Material Testm2;
+    [HideInInspector]
+    public Material Elecm1;
+    public Material Elecm2;
+
+    private Renderer rend;
+    private Renderer rend2;
+    public GameObject ElecObj;
 
     private float mdel;
 
-    // Start is called before the first frame update
+    public PuzzleCircleBody ElectricTarget;
+
     void Start()
     {
-        
+        rend = gameObject.GetComponent<Renderer>();
+        Testm1 = rend.material;
+        rend2 = ElecObj.GetComponent<Renderer>();
+        Elecm1 = rend2.material;
     }
 
-    // Update is called once per frame
+   
     void FixedUpdate()
     {
 
         if (mdel > 0)
         {
-            Renderer rend = gameObject.GetComponent<Renderer>();
+            
             rend.material = Testm2;
+            rend2.material = Elecm2;
 
+            ElectricTarget.ElectricOn = true;
             mdel--;
 
         }
         else
         {
-            Renderer rend = gameObject.GetComponent<Renderer>();
+            
             rend.material = Testm1;
+            rend2.material = Elecm1;
+
+
+            ElectricTarget.ElectricOn = false;
         }
 
     }
