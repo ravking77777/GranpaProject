@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 239378781582670930, guid: 14a8b124257ffef47b7008a2e2eb5175, type: 3}
+  - {fileID: 2100000, guid: 5b0063d66c2029848b3618cf9f704131, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -182,6 +182,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &8602173584426548167
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -329,6 +333,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &3365527464440285255
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -476,6 +484,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &1624284249177861149
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -626,6 +638,7 @@ GameObject:
   - component: {fileID: 4075919865978002069}
   - component: {fileID: 8200056318030673613}
   - component: {fileID: 4204903269650248658}
+  - component: {fileID: 780752747640182159}
   m_Layer: 16
   m_Name: SphereColl
   m_TagString: Untagged
@@ -704,6 +717,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &780752747640182159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679710348016713031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d62ed97b3d7234d8a25aa10b389dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearSphere: 1
+  clearOn: 0
 --- !u!1 &806299491483927738
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +920,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &8232975189453674294
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1043,6 +1074,7 @@ GameObject:
   - component: {fileID: 1740509549566904063}
   - component: {fileID: 321498269164782506}
   - component: {fileID: 6177253734457121917}
+  - component: {fileID: 1219982670204953900}
   m_Layer: 16
   m_Name: SphereColl
   m_TagString: Untagged
@@ -1121,6 +1153,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1219982670204953900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2554945445190557701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d62ed97b3d7234d8a25aa10b389dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearSphere: 1
+  clearOn: 0
 --- !u!1 &2656572580032422166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1556,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 239378781582670930, guid: 14a8b124257ffef47b7008a2e2eb5175, type: 3}
+  - {fileID: 2100000, guid: 5b0063d66c2029848b3618cf9f704131, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1544,6 +1590,7 @@ GameObject:
   - component: {fileID: 1705836619919538834}
   - component: {fileID: 1007866617822338549}
   - component: {fileID: 3302714173251115656}
+  - component: {fileID: 1531322212683143361}
   m_Layer: 16
   m_Name: SphereColl
   m_TagString: Untagged
@@ -1622,6 +1669,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1531322212683143361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747449319110208884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d62ed97b3d7234d8a25aa10b389dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearSphere: 1
+  clearOn: 0
 --- !u!1 &3815668890853216044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1782,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &6155701898807035941
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2004,7 +2069,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 239378781582670930, guid: 14a8b124257ffef47b7008a2e2eb5175, type: 3}
+  - {fileID: 2100000, guid: 5b0063d66c2029848b3618cf9f704131, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2087,7 +2152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 239378781582670930, guid: 14a8b124257ffef47b7008a2e2eb5175, type: 3}
+  - {fileID: 2100000, guid: 5b0063d66c2029848b3618cf9f704131, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2120,6 +2185,7 @@ GameObject:
   - component: {fileID: 5993777101587282462}
   - component: {fileID: 8683886684981871938}
   - component: {fileID: 7709752204902119299}
+  - component: {fileID: 6067512396668857614}
   m_Layer: 0
   m_Name: GalaxyPuzzleCore
   m_TagString: Untagged
@@ -2136,7 +2202,7 @@ Transform:
   m_GameObject: {fileID: 4875210909384526735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -45.8, y: 63.9, z: 102.1}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2202,7 +2268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 4baed585074d90d47b993e7826a24fbf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2224,6 +2290,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6067512396668857614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875210909384526735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6096a813e2b1b95419b192534c4311a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheres:
+  - {fileID: 2554945445190557701}
+  - {fileID: 3747449319110208884}
+  - {fileID: 679710348016713031}
+  - {fileID: 6098360547494359772}
+  CheckMaterial1: {fileID: 0}
+  CheckMaterial2: {fileID: 2100000, guid: cd403f1f80849014daf7994ddbb84861, type: 2}
 --- !u!1 &4919001760469167531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2373,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4baed585074d90d47b993e7826a24fbf, type: 2}
+  - {fileID: 2100000, guid: e1cd931b1691205409846404b5c9fca9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2323,6 +2408,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 1
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &5540633609256651410
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2470,6 +2559,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &3030747345158202837
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2617,6 +2710,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &2084830180523370045
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2764,6 +2861,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 0
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &7193605281821915637
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2824,6 +2925,7 @@ GameObject:
   - component: {fileID: 9155609791256846647}
   - component: {fileID: 7796371282267769861}
   - component: {fileID: 6178392282868659922}
+  - component: {fileID: 6024866006062802900}
   m_Layer: 16
   m_Name: SphereColl
   m_TagString: Untagged
@@ -2902,6 +3004,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6024866006062802900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098360547494359772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d62ed97b3d7234d8a25aa10b389dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearSphere: 1
+  clearOn: 0
 --- !u!1 &6212458320605148760
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,7 +3256,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4baed585074d90d47b993e7826a24fbf, type: 2}
+  - {fileID: 2100000, guid: e1cd931b1691205409846404b5c9fca9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3175,6 +3291,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 1
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &4670905033798162585
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3371,7 +3491,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4baed585074d90d47b993e7826a24fbf, type: 2}
+  - {fileID: 2100000, guid: e1cd931b1691205409846404b5c9fca9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3406,6 +3526,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 1
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &761449846616159114
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3518,7 +3642,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4baed585074d90d47b993e7826a24fbf, type: 2}
+  - {fileID: 2100000, guid: e1cd931b1691205409846404b5c9fca9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3553,6 +3677,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseBody: {fileID: 5993777101587282462}
+  KeyBall: 0
+  IsKey: 1
+  KBmaterial1: {fileID: 0}
+  KBmaterial2: {fileID: 2100000, guid: a83a63b65e3cb3a4e8996f0c40caa8f3, type: 2}
 --- !u!135 &6184342500613721110
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4162,17 +4290,17 @@ PrefabInstance:
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.900002
+      value: -63.4
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.4
+      value: 95.01
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.990005
+      value: 25.56
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
@@ -4779,17 +4907,17 @@ PrefabInstance:
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0999985
+      value: -33.4
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.4
+      value: 95.01
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.960007
+      value: 25.589996
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
@@ -5396,17 +5524,17 @@ PrefabInstance:
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.900002
+      value: -53.4
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.4
+      value: 95.01
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.710007
+      value: 25.839996
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
@@ -6013,17 +6141,17 @@ PrefabInstance:
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.9000015
+      value: -43.4
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.4
+      value: 95.01
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.990005
+      value: 25.559998
       objectReference: {fileID: 0}
     - target: {fileID: 8282426930716450018, guid: 18a8e22923132a842bfd5463db9e936d,
         type: 3}
