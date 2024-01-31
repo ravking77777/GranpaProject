@@ -4,6 +4,7 @@ using UnityEngine;
 public class PuzzleBallScript : MonoBehaviour
 {
     private PuzzleCircleBody Cstep;
+    private ClearSphere CBcheck;
     public Transform BaseBody;
     private bool Moved=false;
     private bool Lock = false;
@@ -11,6 +12,8 @@ public class PuzzleBallScript : MonoBehaviour
     [HideInInspector]
     public bool KeyBall = false;
     public bool IsKey = false;
+
+    [HideInInspector]
     public Material KBmaterial1;
     public Material KBmaterial2;
 
@@ -53,18 +56,32 @@ public class PuzzleBallScript : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("whatIsCB"))
         {
-
-            if (!Moved)
-                if (Lock)
+            CBcheck = collision.gameObject.GetComponent<ClearSphere>();
+            if (CBcheck != null)
+            {
+                
+                if (CBcheck.clearSphere && IsKey && KeyBall)
                 {
-                    transform.position = collision.transform.position;
-                    Lock = false;
+                    CBcheck.clearOn = true;
+
+                }
+                else
+                {
+                    CBcheck.clearOn = false;
 
                 }
 
+            }
+
+            if (!Moved)
+            if (Lock)
+            {
+                transform.position = collision.transform.position;
+                Lock = false;
+
+            }
+
         }
-
-
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("whatIsGB"))
         {
@@ -87,15 +104,14 @@ public class PuzzleBallScript : MonoBehaviour
                 else
                 {
                     
-
                     if (Moved)
                     {
                         transform.SetParent(BaseBody);
                         Moved = false;
                         Lock= true;
                     }
-                }
 
+                }
             }
 
             
