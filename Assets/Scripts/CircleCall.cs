@@ -48,7 +48,7 @@ public class CircleCall : MonoBehaviour
 
 
         RaycastHit raycastHit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance, LayerMask.NameToLayer("whatIsGB")))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance))
         {
             // 마우스가 오브젝트 위에 있을 때 수행할 작업
             if ((raycastHit.collider.gameObject == this.gameObject) && (conCool <= 0) && (distance < 8f))
