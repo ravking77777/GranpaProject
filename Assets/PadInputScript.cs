@@ -22,7 +22,7 @@ public class PadInputScript : MonoBehaviour
 
     private Renderer rend;
 
-    
+
 
 
     private void Start()
@@ -33,7 +33,7 @@ public class PadInputScript : MonoBehaviour
         PTI = padObject.GetComponent<PadTextInput>();
 
     }
-    
+
 
     void Update()
     {
@@ -46,11 +46,11 @@ public class PadInputScript : MonoBehaviour
 
             rend.material = mClick;
         }
-        else if (rend.material=mClick)
+        else if (rend.material = mClick)
         {
             rend.material = mDefault;
         }
-        
+
 
         RaycastHit raycastHit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance))
@@ -68,7 +68,7 @@ public class PadInputScript : MonoBehaviour
 
 
                         PTI.Push(iNum);
-                       
+
 
                     }
 

@@ -57,7 +57,7 @@ public class PlayerCamera : MonoBehaviour
             if (wr.wallLeft)
                 wRot += (60 - wRot) * 0.1f;
             if (wr.wallRight)
-                wRot += (-64 - wRot) * 0.1f;
+                wRot += (-60 - wRot) * 0.1f;
         }
         else
         {
