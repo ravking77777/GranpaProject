@@ -6,6 +6,8 @@ public class PlatformAttach : MonoBehaviour
 {
     public PlayerController pm;
     public GameObject Player;
+
+    public GameObject Ele;
     public Rigidbody prb;
 
 
@@ -16,12 +18,18 @@ public class PlatformAttach : MonoBehaviour
         if (other.gameObject == Player)
         {
             prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
-            //pm.grounded = true;
-            
 
-            //pm.onMovingPlatform = true;
             Player.transform.parent = transform;
          
+        }
+
+
+        if (other.gameObject == Ele)
+        {
+            //prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
+
+            Ele.transform.parent = transform;
+
         }
 
     }
@@ -34,8 +42,6 @@ public class PlatformAttach : MonoBehaviour
             if (Player.transform.parent = transform)
             Player.transform.parent = null;
 
-            //pm.onMovingPlatform = false;
-           // pm.grounded = false;
         }
         
 
