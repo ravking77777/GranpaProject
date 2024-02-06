@@ -37,6 +37,9 @@ public class NumberCircleRotate : MonoBehaviour
         }
         else
         {
+            if (RotNum == 10)
+                RotNum = 0;
+
             rot = 36 * RotNum;
             transform.rotation = Quaternion.Euler(-90 + rot, 0, 180);
         }
@@ -46,21 +49,16 @@ public class NumberCircleRotate : MonoBehaviour
 
     public void RotateUp()
     {
-        if (RotNum == 10)
-            RotNum = 0;
-
+        
         RotNum++;
 
         numCall.cNum[soonser] = RotNum;
         rotating = 30;
-
     }
 
 
     public void RotateDown()
     {
-        if (RotNum == 0)
-            RotNum = 10;
         RotNum--;
 
         numCall.cNum[soonser] = RotNum;
