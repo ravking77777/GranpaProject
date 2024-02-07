@@ -267,7 +267,7 @@ public class Swinging : MonoBehaviour
         if (GetComponent<Grappling>() != null)
             GetComponent<Grappling>().StopGrapple();
 
-        shtAnim.runtimeAnimatorController = RACstand;
+        
 
         pm.ResetRestrictions();
         pm.grounded = false;
@@ -423,8 +423,8 @@ public class Swinging : MonoBehaviour
             ccol.enabled = true;
             catchHitObject.transform.SetParent(null);
             catchRend.material = saveMaterial;
+            shtAnim.runtimeAnimatorController = RACshoot;
 
-            
             airAnim.speed = 2f;
             ps_shoot.Play();
 
@@ -490,7 +490,7 @@ public class Swinging : MonoBehaviour
 
             
         }
-
+        
         catching = false;
 
         lr.positionCount = 0;
