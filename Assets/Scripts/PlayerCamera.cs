@@ -6,6 +6,7 @@ public class PlayerCamera : MonoBehaviour
 {
     public float sensX;
     public float sensY;
+    public float sensXY;
 
     public Transform orientation;
     public Camera myCam;
@@ -37,13 +38,19 @@ public class PlayerCamera : MonoBehaviour
 
     public void OnXSlideEvent(float value)
     {
-        sensX = value*100;
+        sensX = value;
     }
 
     public void OnYSlideEvent(float value)
     {
-        sensY = value*100;
+        sensY = value;
     }
+
+    public void OnXYSlideEvent(float value)
+    {
+        sensXY = value;
+    }
+
 
     private void Update()
     {
@@ -78,8 +85,8 @@ public class PlayerCamera : MonoBehaviour
         {
             if (!pm.wallrunning)
             { 
-            float mouseX = Input.GetAxisRaw("Mouse X") * Time.smoothDeltaTime * sensX;
-            float mouseY = Input.GetAxisRaw("Mouse Y") * Time.smoothDeltaTime * sensY;
+            float mouseX = Input.GetAxisRaw("Mouse X") * Time.smoothDeltaTime * sensXY;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * Time.smoothDeltaTime * sensXY;
 
             yRotation += mouseX;
 

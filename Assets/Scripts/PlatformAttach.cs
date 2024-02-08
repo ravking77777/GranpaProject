@@ -7,7 +7,7 @@ public class PlatformAttach : MonoBehaviour
     public PlayerController pm;
     public GameObject Player;
 
-    public GameObject Ele;
+    public GameObject Element;
     public Rigidbody prb;
 
 
@@ -15,20 +15,23 @@ public class PlatformAttach : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (!pm.swinging)
-        if (other.gameObject == Player)
-        {
-            prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
+            if (other.gameObject == Player)
+            {
+                prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
 
-            Player.transform.parent = transform;
-         
-        }
+                Player.transform.parent = transform;
 
+            }
 
-        if (other.gameObject == Ele)
-        {
-            //prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
+        if (Element != null)
+        { 
+            if (other.gameObject == Element)
+            {
+                //prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
 
-            Ele.transform.parent = transform;
+                Element.transform.parent = transform;
+
+            }
 
         }
 
