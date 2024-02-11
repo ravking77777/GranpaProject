@@ -2453,8 +2453,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479aa2297fa430c4eb2f8f44e97d1727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 1000
-  sensY: 1000
+  sensX: 100
+  sensY: 100
+  sensXY: 200
   orientation: {fileID: 8438470449382571288}
   myCam: {fileID: 8652588356987441369}
   xRotation: 0

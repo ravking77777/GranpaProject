@@ -6,45 +6,55 @@ public class PlatformAttach : MonoBehaviour
 {
     public PlayerController pm;
     public GameObject Player;
-
-    public GameObject Ele;
     public Rigidbody prb;
+    private int targetLayer;
 
 
+    private void Start()
+    {
+        targetLayer = LayerMask.NameToLayer("whatIsCatchable");
+
+    }
 
     private void OnCollisionEnter(Collision other)
     {
         if (!pm.swinging)
-        if (other.gameObject == Player)
-        {
-            prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
+            if (other.gameObject == Player)
+            {
+                prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
 
-            Player.transform.parent = transform;
-         
-        }
+                Player.transform.parent = transform;
+
+            }
 
 
-        if (other.gameObject == Ele)
-        {
-            //prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
+        if (other.gameObject.layer == targetLayer)
+            {
+                //prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
 
-            Ele.transform.parent = transform;
+                other.transform.parent = transform;
 
-        }
+            }
 
     }
 
     private void OnCollisionExit(Collision other)
     {
-        
+
         if (other.gameObject == Player)
         {
             if (Player.transform.parent = transform)
-            Player.transform.parent = null;
+                Player.transform.parent = null;
 
         }
-        
+
+
+        if (other.gameObject.layer == targetLayer)
+        {
+            if (other.transform.parent = transform)
+                other.transform.parent = null;
+
+        }
 
     }
-
 }

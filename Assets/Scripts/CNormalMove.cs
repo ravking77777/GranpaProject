@@ -8,12 +8,16 @@ public class CNormalMove : MonoBehaviour
     private Rigidbody rb;
     public float deathTime = 300f;
 
-    public GameObject player;
+    public GameObject prediction;
+    public GameObject Player;
+    public Swinging pSwing;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true; // isKinematic을 true로 설정
+
+        pSwing= Player.GetComponent<Swinging>();
     }
 
     void FixedUpdate()
@@ -25,10 +29,11 @@ public class CNormalMove : MonoBehaviour
             deathTime--;
         else
         {
-            if (player.transform.parent == this.transform)
+            if (prediction.transform.parent == this.transform)
             {
 
-                player.transform.parent = null;
+                prediction.transform.parent = null;
+                pSwing.StopSwinging();
 
             }
 

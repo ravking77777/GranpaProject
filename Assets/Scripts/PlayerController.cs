@@ -44,11 +44,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode crouchKey = KeyCode.LeftControl;
 
     //치트키 할당
-    public KeyCode cheatKey1 = KeyCode.F1;
-    public KeyCode cheatKey2 = KeyCode.F2;
-    public KeyCode cheatKey3 = KeyCode.F3;
-    public KeyCode cheatKey4 = KeyCode.F4;
-    public KeyCode cheatKey5 = KeyCode.F5;
+    public KeyCode cheatKey1 = KeyCode.R;
     public KeyCode cheatKey6 = KeyCode.F6;
     public KeyCode cheatKeyF = KeyCode.F;
 
@@ -73,10 +69,6 @@ public class PlayerController : MonoBehaviour
     public Climbing climbingScript;
     public Transform orientation;
     public Transform playerStart;
-    public Transform playerStart2;
-    public Transform playerStart3;
-    public Transform playerStart4;
-    public Transform playerStart5;
     public PlayerCamera pc;
     public Transform playerGun;
     private float rungundown = 0;
@@ -223,33 +215,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(cheatKey1))
         {
             transform.position = playerStart.transform.position;
-
-        }
-
-        if (Input.GetKey(cheatKey2))
-        {
-            transform.position = playerStart2.transform.position;
-
-        }
-
-        if (Input.GetKey(cheatKey3))
-        {
-            transform.position = playerStart3.transform.position;   
-
-
-        }
-
-        if (Input.GetKey(cheatKey4))
-        {
-            transform.position = playerStart4.transform.position;
-
-
-        }
-
-        if (Input.GetKey(cheatKey5))
-        {
-            transform.position = playerStart5.transform.position;
-
 
         }
 

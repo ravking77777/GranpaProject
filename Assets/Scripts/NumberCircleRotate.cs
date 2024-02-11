@@ -37,7 +37,7 @@ public class NumberCircleRotate : MonoBehaviour
         }
         else
         {
-            if (RotNum == 10)
+            if (RotNum >= 10)
                 RotNum = 0;
             if (RotNum < 0)
                 RotNum = 9;

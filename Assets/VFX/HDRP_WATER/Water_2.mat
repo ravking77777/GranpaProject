@@ -85,14 +85,14 @@ Material:
     - _Depth_Distance: 5.9
     - _Depth_Strangth: 1
     - _Depth_Strength: 1.1
-    - _Displacemet_Strength: 0.16
+    - _Displacemet_Strength: -0.08
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _Normal_Strength: 1
+    - _Normal_Strength: 0.44
     - _Normal_Tiling: 3
     - _OpaqueCullMode: 2
     - _RayTracing: 0
@@ -102,7 +102,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Speed: -0.19
+    - _Speed: -0.08
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
