@@ -6362,7 +6362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 1893222062}
   Player: {fileID: 1893222053}
-  Ele: {fileID: 0}
+  Element: {fileID: 0}
   prb: {fileID: 1893222063}
 --- !u!1001 &1195948102
 PrefabInstance:
@@ -7923,7 +7923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 1893222062}
   Player: {fileID: 1893222053}
-  Ele: {fileID: 0}
+  Element: {fileID: 0}
   prb: {fileID: 1893222063}
 --- !u!1 &1384683661
 GameObject:
@@ -11091,7 +11091,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   deathTime: 300
-  player: {fileID: 1893222053}
+  prediction: {fileID: 1072495180}
+  Player: {fileID: 1893222053}
+  pSwing: {fileID: 1893222068}
 --- !u!1 &1806670072
 GameObject:
   m_ObjectHideFlags: 0
@@ -12416,6 +12418,8 @@ MonoBehaviour:
   optionPanel: {fileID: 1856477269}
   backButton: {fileID: 1507483040}
   bgmClip2: {fileID: 8300000, guid: 745cdb8b7ef56c4499d4a61a378a3503, type: 3}
+  fadeObject: {fileID: 0}
+  fadeManager: {fileID: 0}
   canvasGroup: {fileID: 1282118172}
   fadeInDuration: 1.5
 --- !u!4 &1936586877

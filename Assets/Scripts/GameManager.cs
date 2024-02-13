@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
 
     public AudioClip bgmClip2;
 
+    public GameObject fadeObject;
+    public FadeManager fadeManager;
+
 
     public static bool GameIsPaused = false;
 
@@ -31,21 +34,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
        
-        canvasGroup.alpha = 0f; // 초기에 투명하게 설정
-        StartCoroutine(FadeIn());
+        fadeManager = fadeObject.GetComponent<FadeManager>();
+        fadeManager.StartFadeIn();
     }
-
-    IEnumerator FadeIn()
-    {
-        float elapsedTime = 0f;
-        while (elapsedTime < fadeInDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Clamp01(elapsedTime / fadeInDuration); // 시간에 따라 알파 값을 증가시킴
-            yield return null;
-        }
-    }
-
 
 
 public void GameStart()
