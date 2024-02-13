@@ -12103,9 +12103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   deathTime: 300
-  prediction: {fileID: 0}
-  Player: {fileID: 0}
-  pSwing: {fileID: 0}
+  prediction: {fileID: 1072495180}
+  Player: {fileID: 1893222053}
+  pSwing: {fileID: 1893222068}
 --- !u!1 &1856477269
 GameObject:
   m_ObjectHideFlags: 0

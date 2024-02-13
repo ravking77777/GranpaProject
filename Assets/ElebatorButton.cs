@@ -24,7 +24,6 @@ public class ElebatorButton : MonoBehaviour
 
     private void Start()
     {
-        
         currentPosition = transform.parent.transform.position;
         lowerLimit = currentPosition.y;
         upperLimit = currentPosition.y+Limiter;

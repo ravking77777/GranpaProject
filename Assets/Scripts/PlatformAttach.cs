@@ -19,6 +19,7 @@ public class PlatformAttach : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (!pm.swinging)
+            if (Player != null)
             if (other.gameObject == Player)
             {
                 prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
@@ -30,8 +31,7 @@ public class PlatformAttach : MonoBehaviour
 
         if (other.gameObject.layer == targetLayer)
             {
-                //prb.AddForce(new Vector3(0, -5, 0), ForceMode.Impulse);
-
+            
                 other.transform.parent = transform;
 
             }
@@ -42,11 +42,12 @@ public class PlatformAttach : MonoBehaviour
     {
 
         if (other.gameObject == Player)
-        {
+            if (Player != null)
+            {
             if (Player.transform.parent = transform)
                 Player.transform.parent = null;
 
-        }
+            }
 
 
         if (other.gameObject.layer == targetLayer)
