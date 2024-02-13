@@ -47,6 +47,11 @@ public class Button : MonoBehaviour
             if ((hit.collider.gameObject == this.gameObject) && (conCool <= 0) && (distance < 5f))
             {
                 interText.SetActive(true);
+                InGameTextExpose igt;
+                igt = interText.GetComponent<InGameTextExpose>();
+
+                igt.exposeDelay = 2f;
+
 
                 if (Input.GetKey(conKey))
                 {
@@ -62,10 +67,6 @@ public class Button : MonoBehaviour
                     conCool = 3f;
                     AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Switch, this.gameObject);
                 }
-            }
-            else
-            {
-                interText.SetActive(false);
             }
 
         }
