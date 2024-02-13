@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3800090163536103542}
   - component: {fileID: 9133463255034106430}
   - component: {fileID: 2596324210906142419}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5543300895015076183}
   - component: {fileID: 2415308384383860272}
   - component: {fileID: 6981009496527065684}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3615323068419252331}
   - component: {fileID: 6628665317511941671}
   - component: {fileID: 2492347115406491838}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 2276535149302630843}
   - component: {fileID: 4560435407266614402}
   - component: {fileID: 1661749567785216294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4723409592262319532}
   - component: {fileID: 6223741860134617763}
   - component: {fileID: 2159552086139167104}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 5909003504402043349}
   - component: {fileID: 5329900088439086774}
   - component: {fileID: 7390992305825010665}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 8box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 5040411867484657683}
   - component: {fileID: 5884216534002265520}
   - component: {fileID: 6818373132246251389}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 2223011219434006468}
   - component: {fileID: 525121024309550119}
   - component: {fileID: 5026739405519315936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 2022980228715345043}
   - component: {fileID: 3253862480013559963}
   - component: {fileID: 1276760065816107978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box033 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
