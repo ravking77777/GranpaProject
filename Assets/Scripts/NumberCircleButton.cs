@@ -75,7 +75,7 @@ public class NumberCircleButton : MonoBehaviour
 
                     if (Input.GetKey(conKey))
                     {
-                        conCool = 0.3f;
+                        conCool = 0.9f;
 
                         if (selectedRot==RotateState.Up)
                             NCR.RotateUp();

@@ -101,7 +101,8 @@ public class Swinging : MonoBehaviour
            if (Input.GetKeyDown(swingKey))
                 {
 
-                if (!predictionPoint.gameObject.activeSelf && catchPoint.gameObject.activeSelf)
+                if (!catching)
+                    if (!predictionPoint.gameObject.activeSelf && catchPoint.gameObject.activeSelf)
                 {
                     if (catchCheck == false)
                         if (catchCool <=0f)
@@ -119,6 +120,7 @@ public class Swinging : MonoBehaviour
                 }
            if (Input.GetKeyDown(shootKey))
             {
+                if (!pm.swinging)
                 if (catchPoint.gameObject.activeSelf)
                 {
 
@@ -142,23 +144,22 @@ public class Swinging : MonoBehaviour
         else
         gunAnim.speed = 0f;
 
-
-        if (Input.GetKeyUp(swingKey))
+        
+            if (Input.GetKeyUp(swingKey))
         {
             if (pm.swinging)
                 shtAnim.runtimeAnimatorController = RACstand;
-            StopSwinging();
             
-
+                StopSwinging();
         }
 
-        if (catching)
+        if (!pm.swinging)
+            if (catching)
         if (Input.GetKeyUp(shootKey))
         {
             shtAnim.runtimeAnimatorController = RACshoot;
 
             ShootCatching();
-
         }
 
 
