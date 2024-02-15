@@ -32,7 +32,7 @@ public class NumberCircleRotate : MonoBehaviour
 
             rot += (36 * RotNum - rot) * 0.1f;
 
-            transform.rotation = Quaternion.Euler(-90 + rot, 0, 180);
+            transform.rotation = Quaternion.Euler(-90 - rot, 0, 0);
 
         }
         else
@@ -43,7 +43,7 @@ public class NumberCircleRotate : MonoBehaviour
                 RotNum = 9;
             numCall.cNum[soonser] = RotNum;
             rot = 36 * RotNum;
-            transform.rotation = Quaternion.Euler(-90 + rot, 0, 180);
+            transform.rotation = Quaternion.Euler(-90 - rot, 0, 0);
         }
     
     }
