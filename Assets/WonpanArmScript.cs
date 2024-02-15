@@ -8,7 +8,16 @@ public class WonpanArmScript : MonoBehaviour
     public float rotationSpeed = 30f;   // 회전 속도
 
     public bool Rotating;
-    
+
+    public GameObject wonpanPlate;
+
+    private WonpanArmAnimate waa;
+
+
+    private void Start()
+    {
+       waa = wonpanPlate.GetComponent<WonpanArmAnimate>();
+    }
 
     void Update()
     {
@@ -25,6 +34,7 @@ public class WonpanArmScript : MonoBehaviour
         float rotationDirection = Mathf.Sign(angleDifference);
 
         // 회전 수행
+        if (waa.doorclear)
         transform.Rotate(Vector3.up, rotationDirection * rotationAmount);
 
 

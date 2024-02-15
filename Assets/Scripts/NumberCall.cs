@@ -18,8 +18,6 @@ public class NumberCall : MonoBehaviour
 
     [Header("TEST")]
     public GameObject testObj;
-    public Material cMaterial;
-    private Renderer rend;
 
 
 
@@ -31,7 +29,6 @@ public class NumberCall : MonoBehaviour
         anim = GetComponent<Animator>();
 
         anim.speed = 0f;
-        rend = testObj.GetComponent<Renderer>();
 
 
     }
@@ -81,7 +78,10 @@ public class NumberCall : MonoBehaviour
 
                     if (areEqual)
                     {
-                        rend.material = cMaterial;
+                        PushingDoorScript pds;
+                        pds=testObj.GetComponent<PushingDoorScript>();
+
+                        pds.switchOn = true;
                     }
 
                     

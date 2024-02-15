@@ -12,6 +12,10 @@ public class WonpanRotate : MonoBehaviour
     public GameObject interText;
 
     public GameObject WonpanObj;
+    public GameObject WonpanPlate1;
+    public GameObject WonpanPlate2;
+    public GameObject WonpanPlate3;
+
     public bool RotateRight;
 
 
@@ -55,13 +59,18 @@ public class WonpanRotate : MonoBehaviour
         RaycastHit raycastHit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance))
         {
+            WonpanArmAnimate waa1, waa2, waa3;
+            waa1 = WonpanPlate1.GetComponent<WonpanArmAnimate>();
+            waa2 = WonpanPlate2.GetComponent<WonpanArmAnimate>();
+            waa3 = WonpanPlate3.GetComponent<WonpanArmAnimate>();
+
+
             // 마우스가 오브젝트 위에 있을 때 수행할 작업
-            if ((raycastHit.collider.gameObject == this.gameObject) && (conCool <= 0) && (distance < 8f))
+            if ((raycastHit.collider.gameObject == this.gameObject) && (conCool <= 0) && (distance < 8f) && (waa1.doormode==false) && (waa1.doorclear == false))
             {
                 interText.SetActive(true);
                 InGameTextExpose igt;
                 igt = interText.GetComponent<InGameTextExpose>();
-
                 igt.exposeDelay = 2f;
 
                 if (Input.GetKey(conKey))
@@ -71,6 +80,14 @@ public class WonpanRotate : MonoBehaviour
 
                     WonpanArmScript was;
                     was = WonpanObj.GetComponent<WonpanArmScript>();
+
+                    
+
+
+                    waa1.doormode = true;
+                    waa2.doormode = true;
+                    waa3.doormode = true;
+
 
                     if (RotateRight)
                     was.targetRotation += 90;

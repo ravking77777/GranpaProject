@@ -836,7 +836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301d483e5d1532f458acaa141eb37702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 597872511}
   RotNum: 0
   soonser: 3
   NumLever: {fileID: 1215739959}
@@ -1498,7 +1497,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1021906145}
     m_Modifications:
     - target: {fileID: 3181148913853924482, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
@@ -1508,17 +1507,17 @@ PrefabInstance:
     - target: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 329.356
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
@@ -1528,7 +1527,7 @@ PrefabInstance:
     - target: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
         type: 3}
@@ -1653,6 +1652,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 108914251}
   m_SourcePrefab: {fileID: 100100000, guid: b79aa05ef3d40df468825bbdfb935fc4, type: 3}
+--- !u!4 &257823240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3508717561494810384, guid: b79aa05ef3d40df468825bbdfb935fc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 257823239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262460729
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,7 +3427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301d483e5d1532f458acaa141eb37702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 597872511}
   RotNum: 0
   soonser: 1
   NumLever: {fileID: 1215739959}
@@ -4910,6 +4914,38 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1574648935}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1021906144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021906145}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021906145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021906144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.19, y: 5.05, z: 329.356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 257823240}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027457614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5595,7 +5631,6 @@ MonoBehaviour:
   cNum: 00000000000000000000000000000000
   answer: 00000000080000000200000000000000
   testObj: {fileID: 1583441524}
-  cMaterial: {fileID: 2100000, guid: fb496ff7ed6238444af5521403c716c3, type: 2}
 --- !u!1 &1239964486
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,7 +5760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301d483e5d1532f458acaa141eb37702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 597872511}
   RotNum: 0
   soonser: 2
   NumLever: {fileID: 1215739959}
@@ -7205,7 +7239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301d483e5d1532f458acaa141eb37702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 597872511}
   RotNum: 0
   soonser: 0
   NumLever: {fileID: 1215739959}
@@ -10384,6 +10417,6 @@ SceneRoots:
   - {fileID: 7635296724550517972}
   - {fileID: 2923688996154801004}
   - {fileID: 735248096}
-  - {fileID: 257823239}
+  - {fileID: 1021906145}
   - {fileID: 559399344}
   - {fileID: 182836903}
