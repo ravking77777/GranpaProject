@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public GameObject fadeObject;
     public FadeManager fadeManager;
 
-
     public static bool GameIsPaused = false;
 
     KeyCode escapeKey = KeyCode.Escape;
@@ -118,4 +117,10 @@ public void GameStart()
 
     }
 
- }
+    public void TextureSlideEvent(float value)
+    {
+        int textureLevel = Mathf.RoundToInt(value);
+        QualitySettings.SetQualityLevel(textureLevel);
+    }
+
+}
