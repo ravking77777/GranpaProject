@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7098343912342256004}
   - component: {fileID: 6046431883035375284}
   - component: {fileID: 6019601649448112994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlueTrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

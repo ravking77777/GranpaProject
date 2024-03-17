@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 6851026873504002374}
   - component: {fileID: 5693855789125062862}
   - component: {fileID: 229035787272697271}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RedTrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
