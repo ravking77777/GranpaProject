@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject fadeObject;
     public FadeManager fadeManager;
+    public GameObject isTalkyOn;
 
     public static bool GameIsPaused = false;
 
@@ -110,6 +111,7 @@ public void GameStart()
             }
             else
             {
+                if ((isTalkyOn!=null) && (isTalkyOn.activeSelf == false))
                 Pause();
             }
 
