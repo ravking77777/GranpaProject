@@ -119,6 +119,11 @@ public void GameStart()
 
     }
 
+    public void TalkyOn()
+    {
+        isTalkyOn.SetActive(true);
+    }
+
     public void TextureSlideEvent(float value)
     {
         int textureLevel = Mathf.RoundToInt(value);

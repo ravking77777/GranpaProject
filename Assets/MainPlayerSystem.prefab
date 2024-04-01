@@ -3324,6 +3324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9be08642159b640b965ba9148b5c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animm: {fileID: 543706875168548127}
 --- !u!1 &2899279909826076999
 GameObject:
   m_ObjectHideFlags: 0
@@ -13204,13 +13205,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8162437772057726421}
   - component: {fileID: 5877177016229074600}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: FrictionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8162437772057726421
 Transform:
   m_ObjectHideFlags: 0
@@ -13233,7 +13234,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668634423267177871}
-  m_Material: {fileID: 13400000, guid: 4a1f182bf7b18974896fea674174de28, type: 2}
+  m_Material: {fileID: 13400000, guid: 3e9f84963fbcfcc45ac827c369d04867, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -13262,7 +13263,7 @@ GameObject:
   - component: {fileID: 6171082174492627070}
   - component: {fileID: 3344679129749126577}
   - component: {fileID: 7871932017001195151}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerObj
   m_TagString: Player
   m_Icon: {fileID: 0}
