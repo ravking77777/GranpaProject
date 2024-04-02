@@ -35,8 +35,6 @@ jobs:
           name: ${{ steps.requestActivationFile.outputs.filePath }}
           path: ${{ steps.requestActivationFile.outputs.filePath }}
           retention-days: 3
-      - name: Checkout Repository
-        uses: actions/checkout@v2
 
       - name: Set up Unity
         uses: actions/cache@v1.1.0
