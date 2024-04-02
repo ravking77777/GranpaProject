@@ -40,12 +40,6 @@ jobs:
         uses: actions/cache@v1.1.0
         with:
           unity-version: 2022.3.7f1  # 사용할 Unity 버전
-
-      - name: Install NUnit
-        run: |
-          dotnet new tool-manifest
-          dotnet tool install nunit.console --tool-path ./.nuget
-          export PATH="$PATH:$(pwd)/.nuget"
           
       - name: Install NUnit and add to PATH
         run: |
