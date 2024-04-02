@@ -46,6 +46,11 @@ jobs:
           dotnet new tool-manifest
           dotnet tool install nunit.console --tool-path ./.nuget
           export PATH="$PATH:$(pwd)/.nuget"
+          
+      - name: Install NUnit and add to PATH
+        run: |
+          echo "$(pwd)/.nuget" >> $GITHUB_PATH
+          
       - name: Run Unit Tests
         run: |
           nunit3-console Library/ScriptAssemblies/Tests.dll  # 유닛 테스트 실행할 DLL 경로 지정
