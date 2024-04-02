@@ -1,0 +1,29 @@
+name: Unity Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Unity
+        uses: actions/cache@v1.1.0
+        with:
+          path: ~/.nuget/packages  # 캐시 경로를 지정하세요
+
+      - name: Install NUnit
+        run: |
+          dotnet new tool-manifest
+          dotnet tool install nunit.console --tool-path ./.nuget
+          export PATH="$PATH:$(pwd)/.nuget"
+
+      - name: Run Unit Tests
+        run: |
+          nunit3-console Library/ScriptAssemblies/Tests.dll  # 유닛 테스트 실행할 DLL 경로 지정
