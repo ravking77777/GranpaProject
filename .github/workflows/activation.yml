@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checkout repository (required to test local actions)
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       # Request manual activation file
       - name: Request manual activation file
