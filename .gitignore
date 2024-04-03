@@ -71,4 +71,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Allow Tests.dll to be committed
-!Library/ScriptAssemblies/Tests.dll
+!/Library/ScriptAssemblies/Tests.dll
