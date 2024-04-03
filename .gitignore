@@ -1,7 +1,7 @@
 # Unity-specific .gitignore rules
 
 # Ignore generated folders and files
-/[Ll]ibrary/
+/Llibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
