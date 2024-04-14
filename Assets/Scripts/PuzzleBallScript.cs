@@ -13,6 +13,7 @@ public class PuzzleBallScript : MonoBehaviour
     public bool KeyBall = false;
     public bool IsKey = false;
 
+    public GameObject targetMaterialObject;
     [HideInInspector]
     public Material KBmaterial1;
     public Material KBmaterial2;
@@ -24,8 +25,8 @@ public class PuzzleBallScript : MonoBehaviour
 
     private void Start()
     {
-        rend = gameObject.GetComponent<Renderer>();
-        KBmaterial1 = rend.material;
+       rend = targetMaterialObject.GetComponent<Renderer>();
+       KBmaterial1 = rend.material;
     }
 
 

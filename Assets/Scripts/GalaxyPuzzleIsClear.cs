@@ -11,12 +11,14 @@ public class GalaxyPuzzleIsClear : MonoBehaviour
     public Material CheckMaterial1;
     public Material CheckMaterial2;
 
+    public GameObject ClearCheckObject;
+
     private Renderer rend;
 
 
     private void Start()
     {
-        rend = gameObject.GetComponent<Renderer>();
+        rend = ClearCheckObject.GetComponent<Renderer>();
         CheckMaterial1 = rend.material;
     }
 

@@ -1,7 +1,7 @@
 # Unity-specific .gitignore rules
 
 # Ignore generated folders and files
-/Llibrary/
+/[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
@@ -69,6 +69,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-# Allow Tests.dll to be committed
-!/Library/ScriptAssemblies/Tests.dll

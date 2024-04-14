@@ -17,13 +17,19 @@ public class TalkyScript : MonoBehaviour
     public GameObject interText;
     public GameObject TalkyObject;
 
+    public Animator animator;
 
     void Start()
     {
-    }
-    // Start is called before the first frame update
 
-    void Update()
+        if (animator != null)
+        {
+            // 애니메이션의 속도를 0으로 설정
+            animator.speed = 0f;
+        }
+    }
+
+        void Update()
     {
 
         float distance = Vector3.Distance(cam.transform.position, transform.position);
