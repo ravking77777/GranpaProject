@@ -24,6 +24,7 @@ public class Swinging : MonoBehaviour
     private Vector3 swingPoint;
     private SpringJoint joint;
     [HideInInspector] public GameObject swHitObject;
+    public float drToPointMax=10;
 
     [Header("OdmGear")]
     public Transform orientation;
@@ -57,7 +58,6 @@ public class Swinging : MonoBehaviour
     public Animator airAnim;
     private bool aired;
 
-    
 
     [Header("Other")]
     private float swingDelay = 0f;
@@ -140,6 +140,16 @@ public class Swinging : MonoBehaviour
         if (pm.swinging)
         {
             gunAnim.speed = 2f;
+            Vector3 directionToPoint = swingPoint - transform.position;
+            float distanceFromPoint = Vector3.Distance(transform.position, swingPoint);
+
+            if (distanceFromPoint < drToPointMax)
+            {
+            float extendedDistanceFromPoint = Vector3.Distance(transform.position, swingPoint) + extendCableSpeed*2;
+
+            joint.maxDistance = extendedDistanceFromPoint * 0.4f; // base 0.8f
+            joint.minDistance = extendedDistanceFromPoint * 0.2f; // base 0.25f
+            }
         }
         else
         gunAnim.speed = 0f;
@@ -210,6 +220,8 @@ public class Swinging : MonoBehaviour
 
         if (catchCool > 0f)
             catchCool -= Time.smoothDeltaTime;
+
+
 
     }
 
@@ -291,7 +303,7 @@ public class Swinging : MonoBehaviour
         float distanceFromPoint = Vector3.Distance(player.position, swingPoint);
 
         joint.maxDistance = distanceFromPoint * 0.4f;
-        joint.minDistance = distanceFromPoint * 0.1f;
+        joint.minDistance = distanceFromPoint * 0.2f;
 
         joint.spring = 4.5f;
         joint.damper = 10f;
@@ -650,12 +662,15 @@ public class Swinging : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Vector3 directionToPoint = swingPoint - transform.position;
-            rb.AddForce(directionToPoint.normalized * forwardThrustForce * Time.deltaTime);
-
             float distanceFromPoint = Vector3.Distance(transform.position, swingPoint);
 
-            joint.maxDistance = distanceFromPoint * 0.4f; // base 0.8f
-            joint.minDistance = distanceFromPoint * 0.2f; // base 0.25f
+            if (distanceFromPoint > drToPointMax)
+            {
+                rb.AddForce(directionToPoint.normalized * forwardThrustForce * Time.deltaTime);
+
+                joint.maxDistance = distanceFromPoint * 0.4f; // base 0.8f
+                joint.minDistance = distanceFromPoint * 0.2f; // base 0.25f
+            }
 
 
         }
