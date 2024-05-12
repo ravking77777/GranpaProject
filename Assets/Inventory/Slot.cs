@@ -35,4 +35,15 @@ public class Slot : MonoBehaviour
             image.raycastTarget = false;
 
     }
+
+    public void VocChanger()
+    {
+        Debug.Log("test");
+        if (_item.itemName=="GrandCall001")
+        {
+            AudioManager.instance.vocClip = item.itemVoice;
+            AudioManager.instance.VOCAwake();
+            Debug.Log("test2");
+        }
+    }
 }

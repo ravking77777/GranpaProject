@@ -13,7 +13,6 @@ public class PlatButtonScript : MonoBehaviour
 
     private Renderer rend;
     private Renderer rend2;
-    public GameObject ElecObj;
 
     private float mdel;
 
@@ -23,7 +22,7 @@ public class PlatButtonScript : MonoBehaviour
     {
         rend = gameObject.GetComponent<Renderer>();
         Testm1 = rend.material;
-        rend2 = ElecObj.GetComponent<Renderer>();
+        rend2 = this.GetComponent<Renderer>();
         Elecm1 = rend2.material;
     }
 

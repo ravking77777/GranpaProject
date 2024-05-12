@@ -11,9 +11,7 @@ public class TalkyOnScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isEscapePressed = true;
-            animm.SetBool("TalkyDown", false);
-            Invoke("DisableObject", 0.5f); // 1초 후에 DisableObject 함수를 호출합니다.
+            DisableReady();
         }
 
 
@@ -25,5 +23,12 @@ public class TalkyOnScript : MonoBehaviour
         {
             gameObject.SetActive(false); 
         }
+    }
+
+    public void DisableReady()
+    {
+        isEscapePressed = true;
+        animm.SetBool("TalkyDown", false);
+        Invoke("DisableObject", 0.5f); // 1초 후에 DisableObject 함수를 호출합니다.
     }
 }

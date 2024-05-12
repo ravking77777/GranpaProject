@@ -16,6 +16,7 @@ public class TalkyScript : MonoBehaviour
     public Camera cam;
     public GameObject interText;
     public GameObject TalkyObject;
+    public AudioClip vocClip;
 
     public Animator animator;
 
@@ -63,7 +64,10 @@ public class TalkyScript : MonoBehaviour
                     TalkyObject.SetActive(true);
                     this.gameObject.SetActive(false);
 
-                    
+
+                    AudioManager.instance.vocClip = vocClip;
+                    AudioManager.instance.VOCAwake();
+
 
                 }
 
