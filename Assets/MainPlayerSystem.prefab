@@ -1236,7 +1236,6 @@ GameObject:
   - component: {fileID: 2545145669743282064}
   - component: {fileID: 4103669383444402494}
   - component: {fileID: 5899038117319908037}
-  - component: {fileID: 7694801773754990967}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1583,14 +1582,6 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
---- !u!81 &7694801773754990967
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882501073483000550}
-  m_Enabled: 1
 --- !u!1 &1007175767977882817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2351,7 @@ GameObject:
   - component: {fileID: 8652588356987441369}
   - component: {fileID: 1163088924839908990}
   - component: {fileID: 2761072544080866514}
+  - component: {fileID: 6895218803742219691}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -2589,6 +2581,14 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!81 &6895218803742219691
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138820063528161040}
+  m_Enabled: 1
 --- !u!1 &2147364795730117517
 GameObject:
   m_ObjectHideFlags: 0

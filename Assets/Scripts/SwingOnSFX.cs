@@ -18,7 +18,7 @@ public class SwingOnSFX : MonoBehaviour
 
         if ((pm.swinging==true) && playOn==0)
         {
-            AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Hook, onSfx);
+            AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Hook, onSfx, Random.Range(0.8f, 1.2f));
             playOn = 1;
         }
 

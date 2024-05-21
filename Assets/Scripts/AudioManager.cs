@@ -27,10 +27,11 @@ public class AudioManager : MonoBehaviour
     public int channels;
     AudioSource[] sfxPlayers;
     int channelIndex;
+    public GameObject audioListener;
+    
 
 
-
-    public enum Sfx { Button, Hook, Jump, Slide, Footstep, Switch }
+    public enum Sfx { Button, Hook, Jump, Slide, Footstep, Switch, FVoice001}
 
 
     void Awake()
@@ -45,6 +46,8 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
+
+
         // vocPlayer가 재생 중일 때
         if (vocPlayer.isPlaying)
         {
@@ -203,7 +206,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySfx3D(Sfx sfx, GameObject sfxObject)
+    public void PlaySfx3D(Sfx sfx, GameObject sfxObject, float spitch)
     {
         for (int index = 0; index < sfxPlayers.Length; index++)
         {
@@ -215,12 +218,10 @@ public class AudioManager : MonoBehaviour
             channelIndex = loopIndex;
             sfxPlayers[loopIndex].volume = sfxVolume;
             sfxPlayers[loopIndex].spatialBlend = 1;
-            sfxPlayers[loopIndex].minDistance = 1;
-            sfxPlayers[loopIndex].maxDistance = 20;
-
 
             sfxPlayers[loopIndex].clip = sfxClips[(int)sfx];
             sfxPlayers[loopIndex].transform.position = sfxObject.transform.position;
+            sfxPlayers[loopIndex].pitch = spitch;
             sfxPlayers[loopIndex].Play();
             break;
         }

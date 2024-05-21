@@ -66,7 +66,7 @@ public class CircleCall : MonoBehaviour
 
                     anim.speed = 2f;
                     
-                    AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Switch, this.gameObject);
+                    AudioManager.instance.PlaySfx3D(AudioManager.Sfx.Switch, this.gameObject, Random.Range(0.8f, 1.2f));
                 }
 
             }
