@@ -27,7 +27,7 @@ public class TrainPath : MonoBehaviour
         {
             transform.Translate(direction.normalized * distanceThisFrame, Space.World);
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed*0.5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed*0.2f);
         }
 
     }
