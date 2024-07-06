@@ -285,6 +285,7 @@ public class Swinging : MonoBehaviour
         pm.ResetRestrictions();
         pm.grounded = false;
         pm.swinging = true;
+        
 
         player.SetParent(null);
         
@@ -335,7 +336,7 @@ public class Swinging : MonoBehaviour
         }
 
         catching = true;
-
+        gunTipPp.SetActive(false);
 
         shtAnim.runtimeAnimatorController = RACshoot;
 
@@ -440,6 +441,7 @@ public class Swinging : MonoBehaviour
 
             airAnim.speed = 2f;
             ps_shoot.Play();
+            gunTipPp.SetActive(true);
 
             crs = catchHitObject.GetComponent<CatchableRopeScript>();
             if (crs != null)
@@ -499,13 +501,13 @@ public class Swinging : MonoBehaviour
 
             gunTrigger.SetActive(true);
             gunTipPunch.SetActive(false);
-            gunTipPp.SetActive(true);
+            
 
             
         }
         
         catching = false;
-
+        gunTipPp.SetActive(true);
         lr.positionCount = 0;
         Destroy(joint);
     }

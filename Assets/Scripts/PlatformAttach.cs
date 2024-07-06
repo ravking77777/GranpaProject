@@ -12,6 +12,17 @@ public class PlatformAttach : MonoBehaviour
 
     private void Start()
     {
+        // Find the Player GameObject in the scene
+        if (Player == null)
+            Player = GameObject.Find("Player");
+
+        // Get the PlayerController component from the Player GameObject
+        if (Player != null)
+        {
+            pm = Player.GetComponent<PlayerController>();
+            prb = Player.GetComponent<Rigidbody>();
+        }
+
         targetLayer = LayerMask.NameToLayer("whatIsCatchable");
 
     }

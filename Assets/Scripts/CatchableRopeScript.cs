@@ -12,6 +12,8 @@ public class CatchableRopeScript : MonoBehaviour
     public bool throwed=false;
     public bool attached=false;
 
+ 
+
     void Start()
     {
         animator = GetComponent<Animator>();

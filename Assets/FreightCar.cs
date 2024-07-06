@@ -7,7 +7,6 @@ public class FreightCar : MonoBehaviour
     public float followDelay = 1.0f; // 화물차가 기차를 따라가는 시간 지연 (초 단위)
     private Queue<Vector3> positionQueue = new Queue<Vector3>(); // 기차의 위치를 저장할 큐
     private Queue<Quaternion> rotationQueue = new Queue<Quaternion>(); // 기차의 회전을 저장할 큐
-    private float timer = 0f; // 타이머 변수
     private float updateInterval = 0.1f; // 위치와 회전을 기록할 시간 간격
     public TrainPath tp;
 

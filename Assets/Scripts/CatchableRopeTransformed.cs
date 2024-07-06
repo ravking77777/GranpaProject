@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class CatchableRopeTransformed : MonoBehaviour
 {
-    private CatchableRopeScript CRscript;
+    public CatchableRopeScript CRscript; //CatchableRopeScript가 있는 오브젝트 참조
     public string newLayerName = "whatIsGrappleable";
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        GameObject parentObject = transform.parent.gameObject;
-        CRscript = parentObject.GetComponent<CatchableRopeScript>();
-
-    }
 
     // Update is called once per frame
     void Update()

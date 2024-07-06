@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (fadeManager != null)
+        if ((fadeManager != null) && (fadeObject.activeInHierarchy))
         {
             fadeManager = fadeObject.GetComponent<FadeManager>();
             fadeManager.StartFadeIn();

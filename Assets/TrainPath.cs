@@ -6,6 +6,7 @@ public class TrainPath : MonoBehaviour
     public List<Transform> waypoints;
     public float speed = 5f;
     private int currentWaypointIndex = 0;
+    [HideInInspector]
     public bool isStopped = false;
     public string stopAtWaypointName = "StopWaypoint"; // 처음 멈출 웨이포인트의 이름
     private bool stopFunctionDisabled = false; // 멈추는 기능 비활성화 상태

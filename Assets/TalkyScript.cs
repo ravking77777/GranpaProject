@@ -22,6 +22,27 @@ public class TalkyScript : MonoBehaviour
 
     void Start()
     {
+        if (player == null)
+            player = GameObject.FindWithTag("Player").transform;
+
+        if (interText == null)
+            interText = GameObject.Find("InterText (TMP)");
+
+        if (TalkyObject == null)
+            TalkyObject = GameObject.Find("GranpaTalky");
+
+        if (animator == null)
+        {
+            Transform grandpaDisc = transform.Find("GrandpaDisc001");
+            if (grandpaDisc != null)
+            {
+                animator = grandpaDisc.GetComponent<Animator>();
+            }
+            else
+            {
+                Debug.LogError("GrandpaDisc001 not found as a child of this GameObject.");
+            }
+        }
 
         if (animator != null)
         {

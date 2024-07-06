@@ -10,6 +10,7 @@ public class ElebatorButton : MonoBehaviour
     private float lowerLimit = 0f; // 아래로 이동 가능한 최소 높이
 
     public float Limiter = 10f;
+    [HideInInspector]
     public bool moveUp = false; // 위로 이동 중인지 여부를 나타내는 플래그
     Vector3 currentPosition;
 

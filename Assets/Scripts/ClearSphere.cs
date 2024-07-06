@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClearSphere : MonoBehaviour
 {
     public bool clearSphere;
+    [HideInInspector]
     public bool clearOn;
 
 
