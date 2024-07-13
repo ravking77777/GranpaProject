@@ -51,7 +51,7 @@ public class TrainPathCall : MonoBehaviour
         RaycastHit raycastHit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out raycastHit, distance))
         {
-            bool hasChild = HasSpecificChild(batParent.transform, batTarget);
+            bool hasChild = HasSpecificChild(batParent.transform, "GreenBattery");
 
             // 마우스가 오브젝트 위에 있을 때 수행할 작업
             if ((raycastHit.collider.gameObject == this.gameObject) && (distance < 8f) && (tp.isStopped==true) && (hasChild))
@@ -78,11 +78,11 @@ public class TrainPathCall : MonoBehaviour
 
     }
 
-    bool HasSpecificChild(Transform parent, GameObject targetChild)
+    bool HasSpecificChild(Transform parent, string targetChildName)
     {
         foreach (Transform child in parent)
         {
-            if (child.gameObject == targetChild)
+            if (child.gameObject.name == targetChildName)
             {
                 return true;
             }

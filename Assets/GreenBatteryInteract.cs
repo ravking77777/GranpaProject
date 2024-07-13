@@ -5,19 +5,38 @@ using UnityEngine;
 public class GreenBatteryInteract : MonoBehaviour
 {
     public Swinging sw;
-    public GameObject batObject;
     public Rigidbody rb;
     private bool prior;
     private float prdel;
     private float matdel;
     public Material changeMaterial;
     private Material originMaterial;
-
+    private List<GameObject> batObjects = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject playerObject = GameObject.Find("Player");
+        if (playerObject != null)
+        {
+            sw = playerObject.GetComponent<Swinging>();
+        }
+        else
+        {
+            Debug.LogError("Player object not found!");
+        }
+
         originMaterial = GetComponent<Renderer>().material;
+        // Find all GameObjects in the scene
+        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+        // Add objects with name "BatteryCase" to the list
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "BatteryCase")
+            {
+                batObjects.Add(obj);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -33,9 +52,12 @@ public class GreenBatteryInteract : MonoBehaviour
             prior = false;
         }
 
-        if (this.transform.parent == batObject.transform)
+        foreach (GameObject batObject in batObjects)
         {
-            matdel = 0.1f;
+            if (this.transform.parent == batObject.transform)
+            {
+                matdel = 0.1f;
+            }
         }
     }
 
@@ -43,11 +65,11 @@ public class GreenBatteryInteract : MonoBehaviour
     {
         if (prdel > 0)
         {
-            
+
         }
         else
         {
-            prior = false; 
+            prior = false;
         }
 
         if (matdel > 0)
@@ -72,15 +94,13 @@ public class GreenBatteryInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.gameObject == batObject) && (!prior))
+        if (batObjects.Contains(other.gameObject) && !prior)
         {
-            this.transform.SetParent(batObject.transform);
+            this.transform.SetParent(other.gameObject.transform);
             rb.useGravity = false;
             rb.isKinematic = true;
-            transform.position = batObject.transform.position;
-            transform.rotation = batObject.transform.rotation;
-            
+            transform.position = other.gameObject.transform.position;
+            transform.rotation = other.gameObject.transform.rotation;
         }
-
     }
 }
