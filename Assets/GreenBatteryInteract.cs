@@ -9,8 +9,7 @@ public class GreenBatteryInteract : MonoBehaviour
     private bool prior;
     private float prdel;
     private float matdel;
-    public Material changeMaterial;
-    private Material originMaterial;
+    public Animator animator;
     private List<GameObject> batObjects = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -26,7 +25,6 @@ public class GreenBatteryInteract : MonoBehaviour
             Debug.LogError("Player object not found!");
         }
 
-        originMaterial = GetComponent<Renderer>().material;
         // Find all GameObjects in the scene
         GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
         // Add objects with name "BatteryCase" to the list
@@ -78,7 +76,10 @@ public class GreenBatteryInteract : MonoBehaviour
 
             if (!prior)
             {
-                GetComponent<Renderer>().material = changeMaterial;
+                if (animator != null)
+                {
+                    animator.speed = 1f;
+                }
             }
 
         }
@@ -86,7 +87,10 @@ public class GreenBatteryInteract : MonoBehaviour
         {
             if (!prior)
             {
-                GetComponent<Renderer>().material = originMaterial;
+                if (animator != null)
+                {
+                    animator.speed = 0;
+                }
             }
         }
 

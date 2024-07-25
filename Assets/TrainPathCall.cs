@@ -15,7 +15,6 @@ public class TrainPathCall : MonoBehaviour
 
     [Header("Battery")]
     public GameObject batParent;
-    public GameObject batTarget;
 
 
     private void Start()

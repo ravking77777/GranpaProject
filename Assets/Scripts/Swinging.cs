@@ -436,7 +436,8 @@ public class Swinging : MonoBehaviour
             catchTipPp.SetActive(true);
             ccol.enabled = true;
             catchHitObject.transform.SetParent(null);
-            catchRend.material = saveMaterial;
+            if (catchRend != null)
+                catchRend.material = saveMaterial;
             shtAnim.runtimeAnimatorController = RACshoot;
 
             airAnim.speed = 2f;
@@ -491,7 +492,8 @@ public class Swinging : MonoBehaviour
             catchTipPp.SetActive(true);
             ccol.enabled = true;
             catchHitObject.transform.SetParent(null);
-            catchRend.material = saveMaterial;
+            if (catchRend != null)
+                catchRend.material = saveMaterial;
 
 
 
